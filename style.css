@@ -583,6 +583,22 @@ footer {
     .p_studies {
         font-size: 12px;
     }
+    
+    #studies_div_first {
+        padding-top: 10px;
+    }
+    
+    #h2_second_div {
+        font-size: 20px;
+    }
+    
+    #p_second_div {
+        font-size: 12px;
+    }
+    
+    #second_div {
+        padding: 30px 20px 30px 20px;
+    }
 }
 
 @media (max-width: 950px) {
@@ -718,6 +734,18 @@ footer {
     #muzhik {
         height: 100px;
         width: 100px;
+    }
+    
+    #first_first_div {
+        margin-top: 30px;
+    }
+    
+    #third_div {
+        padding: 20px 30px;
+    }
+    
+    #fourth_div {
+        padding: 20px 30px;
     }
     
     #first_first_div > div {
