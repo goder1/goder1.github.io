@@ -1,0 +1,902 @@
+body {
+    background-color: grey;
+}
+
+h2 {
+    color: white;
+    font-family: 'Raleway';
+    font-size: 34px;
+    margin: 0;
+}
+
+p {
+    font-family: 'IBM Plex Mono';
+    color: #9C9C9C;
+}
+
+nav {
+    background-color: #1B1B1B;
+    max-width: 1100px;
+    width: 80%;
+    min-width: auto;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.social_media {
+    width: 20px; /* Фиксированная ширина */
+    height: 20px; /* Фиксированная высота */
+    margin-left: 15px; /* Отступ слева */
+    object-fit: contain; /* Сохраняет пропорции */
+    opacity: 0.8; /* Легкая прозрачность */
+    transition: opacity 0.3s ease; 
+}
+
+.social_media:hover {
+    opacity: 1; /* Полная непрозрачность при наведении */
+}
+
+.btn_navbar {
+    background-color: #1B1B1B;
+    color: #9C9C9C;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'IBM Plex Mono';
+    border-color: #1B1B1B;
+    border-width: 0;
+    margin: auto;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+    transition: color 0.3 ease;
+}
+
+.btn_navbar:hover {
+    color: white;
+}
+
+#social3 {
+    margin-right: 30px;
+}
+
+#first_div {
+    background-color: #080808;
+    padding: 0 50px 25px 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#your_name_here {
+    font-size: 44px;
+    font-weight: 800;
+}
+
+#first_first_div > div {
+    flex: 1; /* Текстовый блок занимает доступное пространство */
+    max-width: 500px; /* Ограничиваем максимальную ширину текстового блока */
+}
+
+#first_main_div {
+    max-width: 920px;
+}
+
+#first_first_div {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    color: #9C9C9C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+#collab_p {
+    color: white;
+}
+
+#btn_get_started {
+    color: white;
+    background-color: #3F8E00;
+    border-color: #62BA1B;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'IBM Plex Mono';
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 0 0 30px rgba(63, 142, 0, 0.3); /* Тень с цветом #3F8E00 и прозрачностью 30% */
+    transition: all 0.3s ease; /* Плавная анимация при наведении */
+    padding: 10px 20px;
+    margin-top: 20px;
+    height: 60px;
+    width: 280px;
+}
+
+#btn_get_started:hover {
+    box-shadow: 0 0 40px rgba(63, 142, 0, 0.4); /* Усиление тени при наведении */
+}
+
+#muzhik {
+    display: inline-block;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+}
+
+.collab {
+    width: 190px;
+    height: 60px;
+    background-color: #080808;
+    border-radius: 6%;
+    border: 1px solid #1B1B1B;
+    display: inline-flex;
+    margin: 10px 20px 20px 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#first_div_collab {
+    margin-left: 0;
+}
+
+.img_collab {
+    max-height: 100%;
+    max-width: 100%;
+    /*margin: auto;*/
+}
+
+#first_second_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#second_div {
+    background-color: white;
+    padding: 80px 130px 80px 130px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+#h2_second_div {
+    color: #080808;
+    text-align: center;
+    font-size: 34px;
+    font-family: 'Raleway';
+    font-weight: 800;
+}
+
+#p_second_div {
+    text-align: center;
+    max-width: 520px;
+    margin: 10px auto 20px;
+}
+
+.div_studies_picture {
+    max-width: 30%;
+    max-height: 30%;
+    background-size: cover;
+}
+
+#second_picture_second_div {
+    margin-right: 25px; 
+}
+
+/*
+#fintech_pic {
+    background-image: url(images/pic2.png);
+}
+
+#edtech_pic {
+    background-image: url(images/pic3.png);
+}
+
+#pharma_pic {
+    background-image: url(images/pic4.png);
+}
+*/
+
+.studies_picture {
+    max-height: 300px;
+    max-width: 450px;
+    min-height: 150px;
+    min-width: 225px;
+}
+
+.studies_div {
+    padding-top: 50px;
+    display: flex;
+    margin: 0 auto;
+    width: auto;
+    justify-content: center;
+}
+
+.p_studies {
+    max-width: 400px;
+}
+
+.tech_txt_block {
+    display: inline-block;
+    width: 445px;
+}
+
+.tech_btn {
+    color: white;
+    padding: 10px 24px 10px 24px;
+    border-width: 0;
+    border-radius: 4%;
+    font-family: 'IBM Plex Mono';
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.tech_label {
+    border-radius: 60px;
+    padding-right: 5px;
+    padding-left: 5px;
+    /*border-radius: 20%;*/
+    /*width: 64px;*/
+    /*height: 24px;*/
+    width: 75px;
+    height: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.h3_studies {
+    color: #080808;
+    font-size: 24px;
+    font-weight: 800;
+    font-family: 'Raleway';
+}
+
+#fintech_div {
+    background-color: #FFF6E9;
+}
+
+#fintech_p {
+    color: #FFA217;
+}
+
+#edtech_div {
+    background-color: #D0E6FF;
+}
+
+#edtech_p {
+    color: #000AFF;
+}
+
+#pharma_div {
+    background-color: #E0FFF8;
+}
+
+#pharma_p {
+    color: #2AB090;
+}
+
+#fintech_btn {
+    background-color: #FFA217;
+}
+
+#edtech_btn {
+    background-color: #000AFF;
+}
+
+#pharma_btn {
+    background-color: #2AB090;
+}
+
+h4 {
+    color: white;
+}
+
+#third_div {
+    background-color: #080808;
+    box-sizing: border-box;
+    padding: 80px 130px;
+}
+
+#h2_third_div {
+    text-align: center;
+}
+
+#p_third_div {
+    color: #9C9C9C;
+    max-width: 570px;
+    margin: 10px auto 40px;
+    text-align: center;
+}
+
+.big_div {
+    display: flex;
+    justify-content: center;
+}
+
+.div_clients {
+    width: 500px;
+    background-color: #080808;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background: 
+        linear-gradient(#080808, #080808) padding-box,
+        linear-gradient(90deg, #484848 1.24%, rgba(27, 27, 27, 0) 85%) border-box;
+    background-clip: padding-box, border-box;
+    -webkit-background-clip: padding-box, border-box;
+    margin: 10px 20px 20px 20px;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-right: 10px;
+}
+
+.quotes {
+    position: relative;
+    top: -25px;
+    left: -5px;
+}
+
+.client_name {
+    display: inline-block;
+    margin-left: 15px;
+    font-family: 'Raleway';
+    font-size: 18px;
+}
+
+.div_client_and_name {
+    display: flex;
+    align-items: center;
+}
+
+.p_clients {
+    color: #9C9C9C;
+}
+
+.clients_pics {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+#fourth_div {
+    background-color: white;
+    padding: 80px 130px;
+    box-sizing: border-box;
+}
+
+#under_recent_work {
+    text-align-last: center;
+}
+
+#fourth_div > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.work_pics {
+    min-width: 220px;
+    min-height: 150px;
+    max-width: 440px;
+    max-height: 300px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.work_div {
+    display: inline-block; /* Чтобы div подстраивался под содержимое */
+    text-align: left;
+    padding: 20px;
+    width: auto; /* Отменяем любые фиксированные ширины */
+    max-width: 440px;
+}
+
+#first_work_div {
+    margin-left: 60px;
+    margin-right: 10px;
+}
+
+#second_work_div {
+    margin-right: 60px;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+    transform: scale(1.1);
+}
+
+#h2_fourth_div {
+    color: #080808;
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.p_fourth_div {
+    color: #9C9C9C;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.work_btn {
+    color: white;
+    background-color: #3F8E00;
+    border-color: #62BA1B;
+    padding: 10px 20px;
+    margin: 20px 0 0 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'IBM Plex Mono';
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 0 30px rgba(63, 142, 0, 0.3); /* Тень с цветом #3F8E00 и прозрачностью 30% */
+    transition: all 0.3s ease; /* Плавная анимация при наведении */
+    display: inline-block;
+}
+
+.work_btn:hover {
+    box-shadow: 0 0 40px rgba(63, 142, 0, 0.7); /* Усиление тени при наведении */
+    transform: translateY(-2px);
+}
+
+.h4_fourth_div {
+    font-size: 24px;
+    color: #080808;
+    font-family: 'Raleway';
+    font-weight: 800;
+    margin: 15px 0 10px 0;
+}
+
+#fifth_div {
+    background-color: #080808;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0 0 0;
+    box-sizing: border-box;
+}
+
+#p_fifth_div {
+    color: #9C9C9C;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+#h2_fifth_div {
+    padding-top: 80px;
+    padding-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+form input {
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+label {
+    color: white;
+    text-align: left;
+    font-family: 'IBM Plex Mono';
+    font-size: 12px;
+}
+
+#form_submit {
+    color: white;
+    background-color: #3F8E00;
+    border-color: #62BA1B;
+    padding: 10px 20px;
+    margin: 20px 0 80px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'IBM Plex Mono';
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 0 30px rgba(63, 142, 0, 0.3); /* Тень с цветом #3F8E00 и прозрачностью 30% */
+    transition: all 0.3s ease; /* Плавная анимация при наведении */
+}
+
+#form_submit:hover {
+    box-shadow: 0 0 40px rgba(63, 142, 0, 0.4); /* Усиление тени при наведении */
+}
+
+#input_email {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-family: 'IBM Plex Mono';
+}
+
+#input_mobile {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-family: 'IBM Plex Mono';
+}
+
+#input_message {
+    padding: 12px 0 40px 0;
+    font-family: 'IBM Plex Mono';
+}
+
+footer {
+    color: #9C9C9C;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    display: flex;
+    background-color: #1B1B1B;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    #first_main_div {
+        width: 700px;
+    }
+    
+    #muzhik {
+        height: 200px;
+        width: 200px;
+    }
+    
+    #first_first_div > div {
+        max-width: 350px;
+    }
+    
+    .tech_btn {
+        height: 30px;
+        width: 130px;
+        font-size: 8px;
+    }
+    
+    .tech_label {
+        font-size: 10px;
+        width: 50px;
+        height: 15px;
+    }
+    
+    .h3_studies {
+        font-size: 15px;
+    }
+    
+    .p_studies {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 950px) {
+    .p_clients {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    #first_main_div {
+        width: 500px;
+    }
+    
+    .btn_navbar {
+        width: 50px;
+        font-size: 12px;
+    }
+    
+    #testimonials {
+        width: 100px;
+    }
+    
+    #recent_work {
+        width: 52px;
+    }
+    
+    #case_studies {
+        width: 52px;
+    }
+    
+    #btn_get_started {
+        width: 150px;
+        height: 40px;
+        font-size: 9px;
+    }
+    
+    #your_name_here {
+        font-size: 20px;
+    }
+    
+    #collab_p {
+        font-size: 12px;
+    }
+    
+    #first_first_div > div > p {
+        font-size: 10px;
+    }
+    
+    .p_clients {
+        font-size: 10px;
+    }
+    
+    .client_name {
+        font-size: 13px;
+    }
+    
+    .clients_pics {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .div_clients {
+        padding-bottom: 5px;
+    }
+    
+    #h2_third_div {
+        font-size: 20px;
+    }
+    
+    #p_third_div {
+        font-size: 15px;
+    }
+    
+    #first_work_div {
+        margin-left: 15px;
+    }
+    
+    #second_work_div {
+        margin-right: 15px;
+        height: 100%;
+    }
+    
+    .arrow {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .work_pics {
+        min-width: 120px;
+        min-height: 80px;
+    }
+    
+    .h4_fourth_div {
+        font-size: 14px;
+    }
+    
+    .p_fourth_div {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #h2_fourth_div {
+        font-size: 20px;
+    }
+    
+    .work_btn {
+        font-size: 8px;
+        height: 30px;
+        width: 110px;
+    }
+    
+    #h2_fifth_div {
+        font-size: 20px;
+    }
+    
+    #p_fifth_div {
+        font-size: 15px;
+        max-width: 400px;
+    }
+}
+
+@media(max-width: 650px) {
+    .p_studies {
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 550px) {
+    #first_main_div {
+        width: 300px;
+    }
+    
+    #muzhik {
+        height: 100px;
+        width: 100px;
+    }
+    
+    #first_first_div > div {
+        max-width: 200px;
+    }
+    
+    .btn_navbar {
+        width: 40px;
+        font-size: 8px;
+    }
+    
+    .social_media {
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    
+    .collab {
+        margin: 10px 2px 10px 2px;
+    }
+}
+
+/*
+@media (max-width: 1200px) {
+    #first_first_div {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    #muzhik {
+        margin: 30px 0 0 0;
+    }
+    
+    .tech_txt_block {
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .studies_div {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .studies_picture {
+        order: -1;
+        margin-bottom: 30px;
+    }
+    
+    #second_picture_second_div {
+        margin-right: 0;
+    }
+}
+*/
+
+/*
+@media (max-width: 992px) {
+    nav {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px;
+    }
+    
+    .btn_navbar {
+        margin: 5px;
+    }
+    
+    #social3 {
+        margin-right: 15px;
+    }
+    
+    #first_div, #second_div, #third_div, #fourth_div {
+        padding: 50px 30px;
+    }
+    
+    #first_second_div {
+        justify-content: center;
+    }
+    
+    .collab {
+        width: 150px;
+        margin: 10px;
+    }
+    
+    .div_clients {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .work_div {
+        margin: 10px 0;
+    }
+    
+    #first_work_div, #second_work_div {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+*/
+
+/*
+@media (max-width: 768px) {
+    #your_name_here {
+        font-size: 36px;
+    }
+    
+    #muzhik {
+        width: 250px;
+        height: 250px;
+    }
+    
+    #btn_get_started {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .collab {
+        width: 120px;
+        height: 50px;
+    }
+    
+    .tech_txt_block {
+        width: 100%;
+    }
+    
+    .studies_picture {
+        max-width: 100%;
+    }
+    
+    .arrow {
+        margin: 10px 0;
+    }
+    
+    #h2_fifth_div {
+        padding-top: 40px;
+    }
+}
+*/
+
+/*
+@media (max-width: 576px) {
+    #your_name_here {
+        font-size: 28px;
+    }
+    
+    #muzhik {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .btn_navbar {
+        font-size: 12px;
+        padding: 5px;
+    }
+    
+    .social_media {
+        margin-left: 10px;
+        width: 16px;
+        height: 16px;
+    }
+    
+    #first_div, #second_div, #third_div, #fourth_div {
+        padding: 30px 15px;
+    }
+    
+    .collab {
+        width: 100px;
+        margin: 5px;
+    }
+    
+    .div_clients {
+        margin: 10px 0;
+    }
+    
+    .work_pics {
+        min-width: 180px;
+        min-height: 120px;
+    }
+    
+    form {
+        max-width: 100%;
+    }
+}*/
