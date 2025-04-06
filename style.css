@@ -1,5 +1,6 @@
 body {
     background-color: grey;
+    margin: 0;
 }
 
 h2 {
@@ -24,6 +25,8 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 0 50px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .social_media {
@@ -550,6 +553,11 @@ footer {
     text-align: center;
 }
 
+picture {
+    display: flex;
+    align-items: center;
+}
+
 @media (max-width: 1000px) {
     #first_main_div {
         width: 700px;
@@ -598,6 +606,14 @@ footer {
     
     #second_div {
         padding: 30px 20px 30px 20px;
+    }
+    
+    .work_btn {
+        margin-top: 1px;
+    }
+    
+    .p_fourth_div {
+        margin-bottom: 10px;
     }
 }
 
@@ -706,8 +722,9 @@ footer {
     
     .work_btn {
         font-size: 8px;
-        height: 30px;
-        width: 110px;
+        height: 20px;
+        width: 70px;
+        padding: 4px 5px;
     }
     
     #h2_fifth_div {
@@ -718,11 +735,20 @@ footer {
         font-size: 15px;
         max-width: 400px;
     }
+    
+    #fourth_div {
+        padding: 30px 50px;
+    }
 }
 
 @media(max-width: 650px) {
     .p_studies {
         margin-right: 5px;
+    }
+    
+    .studies_picture {
+        max-width: 300px;
+        max-height: 200px;
     }
 }
 
@@ -765,6 +791,133 @@ footer {
     
     .collab {
         margin: 10px 2px 10px 2px;
+    }
+}
+
+@media (max-width: 500px) {
+    .studies_picture {
+        max-width: 200px;
+        max-height: 120px;
+        min-width: 50px;
+        min-height: 20px;
+    }
+    
+    .tech_btn {
+        padding: 4px 5px 4px 5px;
+        height: 20px;
+        width: 100px;
+    }
+    
+    .p_studies {
+        margin: 5px 5px;
+    }
+    
+    .h3_studies {
+        margin: 5px 5px;
+    }
+    
+    #second_picture_second_div {
+        margin-right: 5px;
+    }
+    
+    #fifth_div {
+        padding: 20px 0 0 0;
+    }
+    
+    #form_submit {
+        margin-bottom: 30px;
+    }
+    
+    form {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 460px) {
+    .btn_navbar {
+        padding: 2px;
+        width: 30px;
+    }
+    
+    #first_div {
+        padding: 0 20px 25px 20px;
+    }
+    
+    nav {
+        padding: 0 20px;
+    }
+    
+    .social_media {
+        margin-left: 2px;
+    }
+    
+    #first_work_div {
+        padding: 5px;
+    }
+    
+    #second_work_div {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 370px) {
+    .arrow {
+        height: 15px;
+        width: 15px;
+    }
+    
+    .work_pics {
+        min-width: 100px;
+        min-height: 70px;
+    }
+    
+    #first_work_div {
+        padding-right: 1px;
+    }
+    
+    #second_work_div {
+        padding-left: 1px;
+    }
+    
+    form {
+        max-width: 250px;
+    }
+    
+    #p_fifth_div {
+        max-width: 280px;
+        font-size: 10px;
+    }
+    
+    input {
+        font-size: 10px;
+    }
+    
+    textarea {
+        font-size: 10px;
+    }
+    
+    #form_submit {
+        font-size: 12px;
+    }
+} 
+
+@media (max-width: 350px) {
+    #home {
+        margin-left: 29px;
+    }
+    
+    #first_main_div {
+        width: 250px;
+    }
+    
+    #first_work_div {
+        margin-left: 5px;
+        margin-right: 2px;
+    }
+    
+    #second_work_div {
+        margin-right: 5px;
+        margin-left: 2px;
     }
 }
 
