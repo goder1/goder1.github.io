@@ -18,25 +18,28 @@
 
     <body>
         <div id="first_div">
-            <nav>
-                <button class = "btn_navbar" id = "home">Home</button>
-                <button class = "btn_navbar" id = "case_studies">Case studies</button>
-                <button class = "btn_navbar" id = "testimonials">Testimonials</button>
-                <button class = "btn_navbar" id = "recent_work">Recent Work</button>
-                <button class = "btn_navbar">Get In Touch</button>
-                <picture>
-                    <source srcset="images/linkedIn_svg.webp" type="image/webp">
-                    <img src = "images/linkedIn_svg.svg" id = "social1" class = "social_media" alt = ".-.">
-                </picture>
-                <picture>
-                    <source srcset="images/behance_webp.webp" type="image/webp">
-                    <img src = "images/behance_svg.svg" id = "social2" class = "social_media" alt = ".-.">
-                </picture>
-                <picture>   
-                    <source srcset="images/twitter_svg.webp" type="image/webp">
-                    <img src ="images/twitter_svg.svg" id = "social3" class = "social_media" alt = ".-.">
-                </picture>
-            </nav>
+            <div id="nav-container">
+                <nav>
+                    <button class = "btn_navbar" id = "home">Home</button>
+                    <button class = "btn_navbar" id = "case_studies">Case studies</button>
+                    <button class = "btn_navbar" id = "testimonials">Testimonials</button>
+                    <button class = "btn_navbar" id = "recent_work">Recent Work</button>
+                    <button class = "btn_navbar">Get In Touch</button>
+                    <picture>
+                        <source srcset="images/linkedIn_svg.webp" type="image/webp">
+                        <img src = "images/linkedIn_svg.svg" id = "social1" class = "social_media" alt = ".-.">
+                    </picture>
+                    <picture>
+                        <source srcset="images/behance_webp.webp" type="image/webp">
+                        <img src = "images/behance_svg.svg" id = "social2" class = "social_media" alt = ".-.">
+                    </picture>
+                    <picture>   
+                        <source srcset="images/twitter_svg.webp" type="image/webp">
+                        <img src ="images/twitter_svg.svg" id = "social3" class = "social_media" alt = ".-.">
+                    </picture>
+                </nav>
+                <div id="nav-placeholder"></div>
+            </div>
             <div id = "first_main_div">
                 <div id = "first_first_div">
                     <div>
@@ -50,7 +53,10 @@
                         <img src = "images/muzhik_svg.svg" id = "muzhik" alt = ".-.">
                     </picture>
                     -->
+                    <!--<img src = "images/muzhik_svg.svg" id = "muzhik" alt = ".-.">-->
+                    <!--<div id = "muzhik_div">-->
                     <img src = "images/muzhik_rectangle.png" id = "muzhik" alt = ".-.">
+                    <!--</div>-->
                 </div>
                 <p id = "collab_p">Worked with</p>
                 <div id = "first_second_div">
@@ -251,7 +257,8 @@
         <div id = "fifth_div">
             <h2 id = "h2_fifth_div">Get in Touch</h2>
             <p id = "p_fifth_div">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <form action = "/">
+            <form action = "/" method="POST">
+                <button id="form_popup_btn">Popup version</button>
                 <label for = "input_email" >Email</label>
                 <input type = "email" name = "email" id = "input_email" placeholder="Please enter your email" required>
                 <label for = "input_mobile">Mobile</label>
@@ -262,5 +269,56 @@
             </form>
             <footer>Made with ❤️</footer>
         </div>
+        
+        <div id="popup_model" class="popup">
+            <img class="close_popup" src="images/close_button.svg" alt=".-.">
+            <img id="popup_image" src="nothing.png" alt=".-.">
+            <div class="popup-nav">
+                <img src = "images/left_arrow.png" id="left_popup_arrow" class = "arrow_popup" alt = ".-.">
+                <img src = "images/right_arrow.png" id="right_popup_arrow" class = "arrow_popup" alt = ".-.">
+            </div>
+        </div>
+        
+        <div id="popup_form" class="popup">
+            <div id="popup_form_content">
+                <form action = "/" method="POST" novalidate>
+                    <label id="email_label" for = "input_email_popup" >Email</label>
+                    <input type = "email" name = "email" id = "input_email_popup" placeholder="Please enter your email" required>
+                    <label id="mobile_label" for = "input_mobile_popup">Mobile</label>
+                    <input type = "number" name = "mobile" id = "input_mobile_popup" placeholder="Enter mobile" required>
+                    <label id="message_label" for = "input_message_popup">Message</label>
+                    <textarea name = "message" id = "input_message_popup" placeholder="Enter your message" required></textarea>
+                    <button id = "form_submit_popup">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+        <div id="popup_message" class="popup">
+            <h1 id="annoying">Внимание, спасибо за внимание</h1>
+        </div>
+        
+        <div id="countdown-timer">
+            <h3>Время до получения диплома:</h3>
+            <div id="timer">
+                <div class="time-block">
+                    <span id="days">00</span>
+                    <span class="time-label">Days</span>
+                </div>
+                <div class="time-block">
+                    <span id="hours">00</span>
+                    <span class="time-label">Hours</span>
+                </div>
+                <div class="time-block">
+                    <span id="minutes">00</span>
+                    <span class="time-label">Minutes</span>
+                </div>
+                <div class="time-block">
+                    <span id="seconds">00</span>
+                    <span class="time-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
     </body>
 </html>
