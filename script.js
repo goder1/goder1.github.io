@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const popup_model = document.getElementById('popup_model');
     const popup_form = document.getElementById('popup_form');
     const popupImg = document.getElementById('popup_image');
-    const closeBtn = document.querySelector('.close_popup');
     const emailInput = document.getElementById('input_email_popup');
     const mobileInput = document.getElementById('input_mobile_popup');
     const messageInput = document.getElementById('input_message_popup');
@@ -184,7 +183,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     openFormBtn.addEventListener('click', openForm);
-    closeBtn.addEventListener('click', closePopupImage);
     leftArrow.addEventListener('click', showPrevImage);
     rightArrow.addEventListener('click', showNextImage);
     
