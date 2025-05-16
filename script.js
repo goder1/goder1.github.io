@@ -17,10 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const openFormBtn = document.getElementById('form_popup_btn');
     const closeFormBtn = document.getElementById('form_submit_popup');
     const annoyingPopup = document.getElementById('popup_message');
-
-    const formFieldEmail = document.getElementById('input_email');
-    const formFieldMobile = document.getElementById('input_mobile');
-    const formFieldMessage = document.getElementById('input_message');
     
     const wasAnnoyingPopupClosed = localStorage.getItem('AnnoyingPopup');
     
@@ -88,9 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function closePopupForm() {
         popup_form.classList.remove('show');
-        formFieldEmail.disabled = false;
-        formFieldMobile.disabled = false;
-        formFieldMessage.disabled = false;
         
         setTimeout(() => {
             popup_form.style.display = 'none';
@@ -100,9 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function ForceClosePopupForm() {
         popup_form.classList.remove('show');
-        formFieldEmail.disabled = false;
-        formFieldMobile.disabled = false;
-        formFieldMessage.disabled = false;
         
         setTimeout(() => {
             popup_form.style.display = 'none';
@@ -137,9 +127,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function openForm() {
         popup_form.style.display = 'flex';
         document.body.style.overflow = 'hidden';
-        formFieldEmail.disabled = true;
-        formFieldMobile.disabled = true;
-        formFieldMessage.disabled = true;
         
         setTimeout(() => {
             popup_form.classList.add('show');
