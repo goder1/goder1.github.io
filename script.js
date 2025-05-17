@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const popupImg = document.getElementById('popup_image');
     const emailInput = document.getElementById('input_email_popup');
     const mobileInput = document.getElementById('input_mobile_popup');
+    const nameInput = document.getElementById('input_name_popup');
     const messageInput = document.getElementById('input_message_popup');
     const leftArrow = document.getElementById('left_popup_arrow');
     const rightArrow = document.getElementById('right_popup_arrow');
@@ -23,6 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const mobileRegex = /^\+?\d{10,15}$/;
     const englishRegex = /^[a-zA-Z0-9\s.,!?@#$%^&*()_+-=<>/[\]{}|\\:;"']*$/;
+    const russianRegex = /^[а-яА-Я0-9\s.,!?@#$%^&*()_+-=<>/[\]{}|\\:;"']*$/;
+    const englishNameRegex = /^[A-Za-z]{2,}(?:['\s-][A-Za-z]+)*$/;
+    const russianNameRegex = /^[А-ЯЁа-яё]{2,}(?:[' -][А-ЯЁа-яё]+)*$/;
     
     let currentImageIndex = 0;
     
@@ -54,8 +58,22 @@ document.addEventListener('DOMContentLoaded', function() {
         return mobileRegex.test(mobile);
     }
 
-    function validateEnglishText(text) {
-        return englishRegex.test(text);
+    function validateText(text) {
+        if (englishRegex.test(text) && !russianRegex.test(text)) {
+            return true;
+        }
+        return !englishRegex.test(text) && russianRegex.test(text);
+    }
+    
+    function validateName(name) {
+        if (englishNameRegex.test(name) && !russianNameRegex.test(name)) {
+            return true;
+        }
+        return !englishNameRegex.test(name) && russianNameRegex.test(name);
+    }
+    
+    function checkSameLanguage(name, text) {
+        return englishRegex.test(text) == englishNameRegex.test(name);
     }
     
     function openPopupImage(index) {
@@ -152,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     messageInput.addEventListener('input', function() {
-        if (!validateEnglishText(this.value) && this.value.length > 0) {
+        if (!validateText(this.value) && this.value.length > 0) {
             this.style.borderColor = 'red';
         } else {
             this.style.borderColor = '';
@@ -163,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function checkFormValidity() {
         const isEmailValid = validateEmail(emailInput.value);
         const isMobileValid = validateMobile(mobileInput.value);
-        const isMessageValid = validateEnglishText(messageInput.value);
+        const isMessageValid = validateTe(messageInput.value);
         
         submitBtn.disabled = !(isEmailValid && isMobileValid && isMessageValid);
         
@@ -213,8 +231,21 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        if (!validateEnglishText(messageInput.value)) {
-            alert('Please use only English characters in your message');
+        if (!validateName(nameInput.value)) {
+            alert('Please use either only English characters or only Russian in your name');
+            nameInput.focus();
+            return;
+        }
+        
+        if (!validateText(messageInput.value)) {
+            alert('Please use either only English characters or only Russian in your message');
+            messageInput.focus();
+            return;
+        }
+        
+        if (!checkSameLanguage(nameInput.value, messageInput.value)) {
+            alert('Please use the same language in both name and message');
+            nameInput.focus();
             messageInput.focus();
             return;
         }
