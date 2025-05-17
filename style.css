@@ -614,6 +614,10 @@ label {
     width: 54px;
 }
 
+#name_label {
+    width: 35px;
+}
+
 #message_label {
     width: 64px;
 }
